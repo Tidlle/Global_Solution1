@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Triagem Hospitalar | SINAIS</title>
+  <link rel="stylesheet" href="../css/style.css"/>
+</head>
+<body>
+    <header>
+        <h1><img class="logo-home" src="../img/Logo_SINAIS_SemFundo_Home.png" alt="LOGO SINAIS"></h1>
+        <nav>
+          <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="integrantes.html">Integrantes</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contato.html">Contato</a></li>
+            <li><a href="mapas.html">Mapa de Calor</a></li>
+            <li><a href="triagem-hospital.html" class="active">Dados da triagem</a></li>
+          </ul>
+        </nav>
+      </header>
+
+  <main class="form-container">
+    <h2>Triagem Hospitalar</h2>
+    <form id="form-triagem" onsubmit="event.preventDefault(); window.location.href='index.html';">
+      <label for="nome">Nome do Paciente:</label>
+      <input type="text" id="nome" name="nome" required />
+
+      <label for="idade">Idade:</label>
+      <input type="number" id="idade" name="idade" required />
+
+      <label for="sintomas">Sintomas:</label>
+      <textarea id="sintomas" name="sintomas" rows="4" required></textarea>
+
+      <label for="endereco">Endereço (bairro/cidade):</label>
+      <input type="text" id="endereco" name="endereco" required />
+
+      <label for="tempo">Duração dos sintomas (em dias):</label>
+      <input type="number" id="tempo" name="tempo" required />
+
+      <button type="submit">Registrar Triagem</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 SINAIS - Sistema Integrado Nacional de Alerta e Informações de Saúde</p>
+  </footer>
+</body>
+</html>

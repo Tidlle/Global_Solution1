@@ -1,0 +1,506 @@
+/* style.css - Estilos principais para o app SINAIS */
+
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #F8FAFC;
+  color: #1E293B;
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+header {
+  background-color: #0F4C81;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5em;
+}
+
+header p {
+  margin-top: 5px;
+  font-size: 1em;
+  font-weight: 300;
+}
+
+.logo-home{
+    width: 300px;
+}
+
+.hero {
+  background: linear-gradient(to right, #00c9ff, #92fe9d);
+  color: #fff;
+  text-align: center;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 30px;
+  padding: 60px 20px;
+  border-radius: 8px;
+}
+
+.hero h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.hero .btn {
+  display: inline-block;
+  margin-top: 20px;
+  background-color: white;
+  color: #333;
+  padding: 10px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.hero .btn:hover {
+  background-color: #eee;
+}
+.hero {
+  background: linear-gradient(to right, #00c9ff, #92fe9d);
+  color: #fff;
+  text-align: center;
+  padding: 60px 20px;
+  border-radius: 8px;
+}
+
+.hero h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.hero .btn {
+  display: inline-block;
+  margin-top: 20px;
+  background-color: white;
+  color: #333;
+  padding: 10px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.hero .btn:hover {
+  background-color: #eee;
+}
+
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 15px 0 0 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #f9f871;
+}
+
+main {
+  padding: 30px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.intro {
+  background: linear-gradient(to right, #00c9ff, #92fe9d);
+  color: #fff;
+  text-align: center;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 30px;
+  padding: 60px 20px;
+  border-radius: 8px;
+}
+
+.intro2 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.features {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.feature-card {
+  background-color: #E2E8F0;
+  margin: 20px 20px 0 20px;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  width: 300px;
+  height: 190px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(15, 76, 129, 0.15);
+}
+
+.feature-image {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.4s ease;
+}
+
+.feature-card:hover .feature-image {
+  height: 150px;
+  margin-bottom: 10px;
+}
+
+.feature-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 6px 6px 0 0;
+}
+
+.faq-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px 20px;
+}
+
+.faq-container h2{
+  display: flex;
+  justify-content: center;
+}
+
+.faq-item {
+  margin-bottom: 15px;
+  border-radius: 8px;
+  background-color: #E2E8F0;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  position: relative;
+}
+
+.faq-item input[type="checkbox"] {
+  display: none;
+}
+
+.faq-question {
+  display: block;
+  padding: 16px;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: #0F4C81;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.faq-question:hover {
+  background-color: #0F4C81;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 16px;
+  transition: max-height 0.5s ease, padding 0.5s ease;
+  background: #F8FAFC;
+  font-size: 18px;
+}
+
+.faq-item input[type="checkbox"]:checked ~ .faq-answer {
+  max-height: 500px;
+  padding: 16px;
+}
+
+main.form-container {
+  background-color: #E2E8F0;
+  width: 100%;
+  max-width: 500px;
+  margin: 30px auto;
+  padding: 0 20px 20px;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+form input,
+form textarea {
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+form textarea{
+  height: 290px;
+}
+
+form button {
+  margin-top: 20px;
+  padding: 12px;
+  font-size: 16px;
+  background-color: #0F4C81;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  padding: 10px 20px;
+}
+
+form button:hover {
+  background-color: #1d78c7;
+  color: white;
+}
+
+footer {
+  background-color: #0F4C81;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  font-size: 0.9em;
+}
+
+/* Chatbot */
+
+.chatbox {
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  height: 400px;
+  overflow-y: auto;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+.chatbox .bot,
+.chatbox .user {
+  display: block;
+  margin: 10px 0;
+  max-width: 90%;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.chatbox .bot {
+  background-color: #e1ecf7;
+  text-align: left;
+}
+
+.chatbox .user {
+  background-color: #d1ffd1;
+  text-align: right;
+  margin-left: auto;
+}
+
+#chat-form {
+  display: flex;
+  gap: 10px;
+}
+
+#chat-form input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+}
+
+#chat-form button {
+  padding: 10px 20px;
+  background-color: #0F4C81;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  padding: 10px 16px;
+  font-weight: bold;
+}
+
+#chat-form button:hover {
+  background-color: #1d78c7;
+  color: white;
+}
+
+
+/*Mapas de calor*/
+
+#map {
+      width: 100%;
+      height: 500px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      margin-top: 20px;
+    }
+
+
+
+/* === Responsividade SINAIS === */
+
+/* Extra Small devices (phones, 600px and down) */
+@media (max-width: 600px) {
+
+  header, footer {
+    text-align: center;
+  }
+
+  nav ul {
+    flex-direction: row;
+    gap: 8px;
+  }
+
+  nav a{
+    margin: 0 5px;
+  }
+
+  .feature-card {
+    max-width: 100%;
+  }
+
+  form input, form textarea{
+    width: 95%;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media (min-width: 600px) {
+  header, footer {
+    text-align: center;
+  }
+
+  nav ul {
+    flex-direction: row;
+    gap: 8px;
+  }
+
+  nav a{
+    margin: 0 5px;
+  }
+
+  .feature-card {
+    max-width: 100%;
+  }
+
+  form input, form textarea{
+    width: 95%;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media (min-width: 768px) {
+   header, footer {
+    text-align: center;
+  }
+
+  nav ul {
+    flex-direction: row;
+    gap: 8px;
+  }
+
+  nav a{
+    margin: 0 5px;
+  }
+
+  .feature-card {
+    max-width: 100%;
+  }
+
+  form input, form textarea{
+    width: 95%;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media (min-width: 992px) {
+  header, footer {
+    text-align: center;
+  }
+
+  nav ul {
+    flex-direction: row;
+    gap: 8px;
+  }
+
+  nav a{
+    margin: 0 5px;
+  }
+
+  .feature-card {
+    max-width: 100%;
+  }
+
+  form input, form textarea{
+    width: 95%;
+  }
+}
+
+/* Extra-Large devices (large laptops and desktops, 1300px and up) */
+@media (min-width: 1300px) {
+  header, footer {
+    text-align: center;
+  }
+
+  nav ul {
+    flex-direction: row;
+    gap: 8px;
+  }
+
+  nav a{
+    margin: 0 5px;
+  }
+
+  .feature-card {
+    max-width: 100%;
+  }
+
+  form input, form textarea{
+    width: 95%;
+  }
+}
+
+
+
+

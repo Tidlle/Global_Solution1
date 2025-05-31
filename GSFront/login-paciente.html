@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login do Paciente | SINAIS</title>
+  <link rel="stylesheet" href="../css/style.css"/>
+</head>
+<body>
+  <header>
+    <h1><img class="logo-home" src="img/Logo_SINAIS_SemFundo_Home.png" alt="LOGO SINAIS"></h1>
+  </header>
+
+  <main class="form-container">
+    <h2>Login do Paciente</h2>
+    <form id="login-paciente" onsubmit="event.preventDefault(); window.location.href='paciente/index.html';">
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="senha">Senha:</label>
+      <input type="password" id="senha" name="senha" required />
+
+      <button type="submit">Entrar</button>
+    </form>
+    <p>Não tem uma conta? <a href="cadastro-paciente.html">Cadastre-se aqui</a></p>
+    <p>Área do Hospital - <a href="login-hospital.html">Acesse aqui</a></p>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 SINAIS - Sistema Integrado Nacional de Alerta e Informações de Saúde</p>
+  </footer>
+</body>
+</html>
