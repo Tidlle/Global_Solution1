@@ -53,7 +53,7 @@ O projeto **SINAIS** tem como objetivo rastrear e notificar sintomas de doenças
 
 - Eduardo Martins – RM: 562259
 - Thiago Sposito – RM: 561694
-- Nome 3 – RM: XXXXXXXX
+- Vitor Madrigrano – RM: 564191
 
 ---
 
