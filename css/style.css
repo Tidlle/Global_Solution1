@@ -14,6 +14,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-self: center;
 }
 
 main {
@@ -22,9 +23,7 @@ main {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 40px 20px;
-  max-width: 1200px;
-  margin: 0 auto;
+  padding: 20px 20px;
 }
 
 header {
@@ -32,6 +31,177 @@ header {
   color: white;
   padding: 20px;
   text-align: center;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 20px;
+  flex-wrap: wrap;
+}
+
+.login-page-button a {
+  text-decoration: none;
+  color: white;
+}
+
+.sinais-header {
+  background-color: #0F4C81;
+  padding: 16px 24px;
+  border-bottom: 4px solid #10B981;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo-home {
+  height: 100px;
+  width: auto;
+}
+
+.link-pages ul {
+  list-style: none;
+  display: flex;
+  gap: 5px;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+.link-pages ul li a {
+  position: relative;
+  display: inline-block;
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 16px 12px;
+  border-radius: 4px;
+  transition: color 0.3s ease;
+}
+
+.link-pages ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 4px;
+  height: 2px;
+  width: 0;
+  background-color: #10B981;
+  transition: width 0.3s ease;
+}
+
+.link-pages ul li a:hover::after {
+  width: 100%;
+}
+
+.menu-toggle {
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+  display: none;
+  position: absolute;
+  padding: 30px 30px 0 0;
+  top: 20px;
+  right: 20px;
+  z-index: 1001;
+}
+
+.side-menu {
+  position: fixed;
+  top: 0;
+  left: -300px;
+  width: 250px;
+  height: 100vh;
+  background-color: #0F4C81;
+  color: white;
+  padding: 20px;
+  box-shadow: 2px 0 8px rgba(0,0,0,0.3);
+  transition: left 0.3s ease;
+  z-index: 999;
+}
+
+.side-menu nav ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.side-menu nav ul li a {
+  position: relative;
+  display: inline-block;
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  padding:  0 12px 12px 12px;
+  border-radius: 4px;
+  transition: color 0.3s ease;
+}
+
+.side-menu nav ul li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background-color: #10B981;
+  transition: width 0.3s ease;
+}
+
+.side-menu nav ul li a:hover::after {
+  width: 100%;
+}
+
+.side-menu .close-btn {
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 16px;
+  cursor: pointer;
+}
+
+.menu-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0,0,0,0.4);
+  z-index: 998;
+}
+
+.menu-overlay.active,
+.side-menu.active {
+  display: block;
+}
+
+.side-menu.active {
+  left: 0;
+}
+
+.menu ul li a:hover::after {
+  width: 100%;
+}
+
+.logout-button {
+  color: white;
+  padding: 8px 14px;
+  border-radius: 4px;
+  font-weight: bold;
+  text-decoration: none;
 }
 
 header h1 {
@@ -44,12 +214,6 @@ header p {
   font-size: 1em;
   font-weight: 300;
 }
-
-.logo-home{
-    width: 300px;
-}
-
-
 
 .hero {
   background: linear-gradient(to right, #00c9ff, #92fe9d);
@@ -153,7 +317,7 @@ nav a:hover {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 68px;
   justify-content: center;
 }
 
@@ -169,6 +333,24 @@ nav a:hover {
   position: relative;
   overflow: hidden;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.feature-card-integrantes {
+  background-color: #E2E8F0;
+  margin: 20px 20px 0 20px;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  width: 300px;
+  height: 300px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.feature-card-integrantes img{
+  border-radius: 8px;
 }
 
 .feature-card h2{
@@ -264,12 +446,8 @@ nav a:hover {
 
 .form-container{
   background-color: #E2E8F0;
-  width: 95%;
-  max-width: 1300px;
   margin: 20px;
-  margin: 0 auto;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  padding: 20px 20px;
   border-radius: 8px;
   box-sizing: border-box;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
@@ -338,7 +516,7 @@ footer {
 /* Chatbot */
 
 .chatbox {
-  width: 83%;
+  width: 87%;
   background-color: #f9f9f9;
   border: 1px solid #ccc;
   height: 400px;
@@ -414,6 +592,68 @@ footer {
 /* === Responsividade SINAIS === */
 
 /* Extra Small devices (phones, 600px and down) */
+@media (max-width: 500px) {
+
+  header, footer {
+    text-align: center;
+  }
+
+  .header-container{
+    padding: 0 20px 0 0;
+  }
+
+  .logo-home{
+    height: 50px;
+    width: auto;
+  }
+
+  .menu-toggle{
+    padding: 5px 10px 0 0;
+  }
+
+  nav ul {
+    flex-direction: row;
+    gap: 8px;
+  }
+
+  nav a{
+    margin: 0 5px;
+  }
+
+  .feature-card {
+    max-width: 100%;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .menu {
+    display: none;
+    width: 100%;
+  }
+
+  .menu.active {
+    display: block;
+    background-color: #0F4C81;
+  }
+
+  .menu ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .menu ul li a {
+    padding: 10px 0;
+    display: block;
+  }
+
+  .link-pages{
+    display: none;
+  }
+}
+
 @media (max-width: 600px) {
 
   header, footer {
@@ -433,8 +673,33 @@ footer {
     max-width: 100%;
   }
 
-  form input, form textarea{
-    width: 95%;
+  .menu-toggle {
+    display: block;
+  }
+
+  .menu {
+    display: none;
+    width: 100%;
+  }
+
+  .menu.active {
+    display: block;
+    background-color: #0F4C81;
+  }
+
+  .menu ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .menu ul li a {
+    padding: 10px 0;
+    display: block;
+  }
+
+  .link-pages{
+    display: none;
   }
 }
 
@@ -457,8 +722,33 @@ footer {
     max-width: 100%;
   }
 
-  form input, form textarea{
-    width: 95%;
+  .menu-toggle {
+    display: block;
+  }
+
+  .menu {
+    display: none;
+    width: 100%;
+  }
+
+  .menu.active {
+    display: block;
+    background-color: #0F4C81;
+  }
+
+  .menu ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .menu ul li a {
+    padding: 10px 0;
+    display: block;
+  }
+
+  .link-pages{
+    display: none;
   }
 }
 
@@ -481,8 +771,33 @@ footer {
     max-width: 100%;
   }
 
-  form input, form textarea{
-    width: 95%;
+  .menu-toggle {
+    display: block;
+  }
+
+  .menu {
+    display: none;
+    width: 100%;
+  }
+
+  .menu.active {
+    display: block;
+    background-color: #0F4C81;
+  }
+
+  .menu ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .menu ul li a {
+    padding: 10px 0;
+    display: block;
+  }
+
+  .link-pages{
+    display: none;
   }
 }
 
@@ -505,11 +820,15 @@ footer {
     max-width: 100%;
   }
 
-  form input, form textarea{
-    width: 95%;
+  .link-pages{
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
   }
 }
-
+  
 /* Extra-Large devices (large laptops and desktops, 1300px and up) */
 @media (min-width: 1300px) {
   header, footer {
@@ -529,79 +848,13 @@ footer {
     max-width: 100%;
   }
 
-  form input, form textarea{
-    width: 95%;
+  .menu-toggle{
+    display: none;
+  }
+
+  .link-pages{
+    display: block;
   }
 }
-
-/* HEADER ESTILO FIAP COM ELEMENTOS DO SINAIS */
-
-.sinais-header {
-  background-color: #0F4C81;
-  padding: 16px 24px;
-  border-bottom: 4px solid #10B981;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-.header-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1280px;
-  margin: 0 auto;
-  flex-wrap: wrap;
-}
-
-.logo-home {
-  height: 48px;
-  width: auto;
-}
-
-.menu ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-  margin: 0;
-  padding: 0;
-  flex-wrap: wrap;
-}
-
-.menu ul li a {
-  position: relative;
-  display: inline-block;
-  color: white;
-  font-weight: 600;
-  text-decoration: none;
-  padding: 12px 12px;
-  border-radius: 4px;
-  transition: background-color 0.3s ease;
-  transition: color 0.3s ease;
-}
-  
-.menu ul li a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 4px;
-  height: 2px;
-  width: 0;
-  background-color: #10B981;
-  transition: width 0.3s ease;
-}
-
-.menu ul li a:hover::after {
-  width: 100%;
-}
-
-.logout-button {
-  color: white;
-  padding: 8px 14px;
-  border-radius: 4px;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-
-
 
 

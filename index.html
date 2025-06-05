@@ -1,33 +1,89 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Login do Paciente | SINAIS</title>
-  <link rel="stylesheet" href="css/style.css"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SINAIS - Sistema Integrado Nacional de Alerta e Informações de Saúde</title>
+  <link rel="stylesheet" href="../css/style.css">
 </head>
+
 <body>
-  <header>
-    <h1><img class="logo-home" src="img/Logo_SINAIS_SemFundo_Home.png" alt="LOGO SINAIS"></h1>
+  <header class="sinais-header">
+    <div class="header-container">
+      <div class="logo">
+        <img class="logo-home" src="img/Logo_SINAIS_SemFundo_Home.png" alt="LOGO SINAIS" />
+      </div>
+      <button class="menu-toggle" id="menu-toggle">&#9776;</button>
+
+      <div class="side-menu" id="side-menu">
+        <button class="close-btn" id="close-menu">&times;</button>
+        <nav>
+          <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="integrantes-paciente.html">Integrantes</a></li>
+            <li><a href="faq-paciente.html">FAQ</a></li>
+            <li><a href="contato-paciente.html" class="auth-only">Contato</a></li>
+            <li><a href="mapas-paciente.html">Mapa de Calor</a></li>
+            <li><a href="sintomas-paciente.html" class="auth-only">Enviar Sintomas</a></li>
+            <li id="auth-action-mobile"></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="menu-overlay" id="menu-overlay"></div>
+
+      <nav class="link-pages" id="nav-menu">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="integrantes-paciente.html">Integrantes</a></li>
+          <li><a href="faq-paciente.html">FAQ</a></li>
+          <li><a href="contato-paciente.html" class="auth-only">Contato</a></li>
+          <li><a href="mapas-paciente.html">Mapa de Calor</a></li>
+          <li><a href="sintomas-paciente.html" class="auth-only">Enviar Sintomas</a></li>
+          <li id="auth-action"></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <main class="form-container">
-    <h2>Login do Paciente</h2>
-    <form class="login-form" id="login-paciente" onsubmit="event.preventDefault(); window.location.href='home-paciente.html';">
-      <label for="email">E-mail:</label>
-      <input type="email" id="email" name="email" required />
+  <main>
+    <section class="hero">
+      <h1>Bem-vindo ao SINAIS</h1>
+      <p>Monitoramento comunitário de sintomas em tempo real</p>
+      <a href="faq.html" class="btn">Como funciona</a>
+    </section>
 
-      <label for="senha">Senha:</label>
-      <input type="password" id="senha" name="senha" required />
-
-      <button type="submit">Entrar</button>
-    </form>
-    <p>Não tem uma conta? <a href="cadastro-paciente.html">Cadastre-se aqui</a></p>
-    <p>Área do Hospital - <a href="login-hospital.html">Acesse aqui</a></p>
+    <div class="features">
+      <div class="feature-card">
+        <div class="feature-image">
+          <img src="../img/Exemplo_Chatbot.png" alt="Chatbot" />
+        </div>
+        <h2>Relatos via Chatbot</h2>
+        <p>Use Telegram ou Webchat para informar sintomas anonimamente.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-image">
+          <img src="../img/Exemplo_Triagem.png" alt="Triagens" />
+        </div>
+        <h2>Cadastro em Triagens</h2>
+        <p>Profissionais de saúde registram sintomas e localização durante o atendimento.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-image">
+          <img src="../img/Exemplo_MapasDeCalor.png" alt="Mapa de Calor" />
+        </div>
+        <h2>Mapas de Calor</h2>
+        <p>Visualize áreas com altos índices de sintomas e planeje ações.</p>
+      </div>
+    </div>
   </main>
 
   <footer>
     <p>&copy; 2025 SINAIS - Sistema Integrado Nacional de Alerta e Informações de Saúde</p>
   </footer>
+
+  <script src="../js/script.js"></script>
 </body>
+
 </html>

@@ -1,26 +1,47 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FAQ - SINAIS</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="../css/style.css">
 </head>
+
 <body>
   <header class="sinais-header">
     <div class="header-container">
       <div class="logo">
-        <img class="logo-home" src="img/Logo_SINAIS_SemFundo_Home.png" alt="LOGO SINAIS">
+        <img class="logo-home" src="img/Logo_SINAIS_SemFundo_Home.png" alt="LOGO SINAIS" />
       </div>
-      <nav class="menu">
+      <button class="menu-toggle" id="menu-toggle">&#9776;</button>
+
+      <div class="side-menu" id="side-menu">
+        <button class="close-btn" id="close-menu">&times;</button>
+        <nav>
+          <ul>
+            <li><a href="home-hospital.html">Início</a></li>
+            <li><a href="integrantes-hospital.html">Integrantes</a></li>
+            <li><a href="faq-hospital.html">FAQ</a></li>
+            <li><a href="contato-hospital.html" class="auth-only">Contato</a></li>
+            <li><a href="mapas-hospital.html">Mapa de Calor</a></li>
+            <li><a href="triagem-hospital.html" class="auth-only">Dados da triagem</a></li>
+            <li id="auth-action-mobile"></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="menu-overlay" id="menu-overlay"></div>
+
+      <nav class="link-pages" id="nav-menu">
         <ul>
-          <li><a href="home-paciente.html">Início</a></li>
-          <li><a href="integrantes-paciente.html">Integrantes</a></li>
-          <li><a href="faq-paciente.html">FAQ</a></li>
-          <li><a href="contato-paciente.html">Contato</a></li>
-          <li><a href="mapas-paciente.html">Mapa de Calor</a></li>
-          <li><a href="triagem-hospital.html" class="active">Dados da triagem</a></li>
-          <li><a href="index.html" class="logout-button">Sair</a></li>
+          <li><a href="home-hospital.html">Início</a></li>
+          <li><a href="integrantes-hospital.html">Integrantes</a></li>
+          <li><a href="faq-hospital.html">FAQ</a></li>
+          <li><a href="contato-hospital.html" class="auth-only">Contato</a></li>
+          <li><a href="mapas-hospital.html">Mapa de Calor</a></li>
+          <li><a href="triagem-hospital.html" class="auth-only">Dados da triagem</a></li>
+          <li id="auth-action"></li>
         </ul>
       </nav>
     </div>
@@ -33,7 +54,8 @@
       <input type="checkbox" id="faq1">
       <label for="faq1" class="faq-question">Como funciona o SINAIS?</label>
       <div class="faq-answer">
-        <p>O SINAIS permite que cidadãos e hospitais notifiquem sintomas, ajudando a mapear surtos de doenças em tempo real.</p>
+        <p>O SINAIS permite que cidadãos e hospitais notifiquem sintomas, ajudando a mapear surtos de doenças em tempo
+          real.</p>
       </div>
     </div>
 
@@ -49,7 +71,8 @@
       <input type="checkbox" id="faq3">
       <label for="faq3" class="faq-question">Quem pode ver meus dados?</label>
       <div class="faq-answer">
-        <p>Os dados são anônimos e utilizados apenas por autoridades de saúde pública com o objetivo de prevenção epidemiológica.</p>
+        <p>Os dados são anônimos e utilizados apenas por autoridades de saúde pública com o objetivo de prevenção
+          epidemiológica.</p>
       </div>
     </div>
 
@@ -65,7 +88,8 @@
       <input type="checkbox" id="faq5">
       <label for="faq5" class="faq-question">Quais sintomas posso relatar?</label>
       <div class="faq-answer">
-        <p>Você pode relatar sintomas como febre, dor de cabeça, cansaço, tosse, entre outros. O sistema atualiza as opções conforme doenças monitoradas.</p>
+        <p>Você pode relatar sintomas como febre, dor de cabeça, cansaço, tosse, entre outros. O sistema atualiza as
+          opções conforme doenças monitoradas.</p>
       </div>
     </div>
 
@@ -73,7 +97,8 @@
       <input type="checkbox" id="faq6">
       <label for="faq6" class="faq-question">Hospitais podem acompanhar o mapa de calor?</label>
       <div class="faq-answer">
-        <p>Sim. Unidades de saúde têm acesso ao painel de monitoramento em tempo real com base nas notificações recebidas.</p>
+        <p>Sim. Unidades de saúde têm acesso ao painel de monitoramento em tempo real com base nas notificações
+          recebidas.</p>
       </div>
     </div>
 
@@ -81,7 +106,8 @@
       <input type="checkbox" id="faq7">
       <label for="faq7" class="faq-question">Como os dados ajudam na prevenção?</label>
       <div class="faq-answer">
-        <p>As notificações permitem identificar possíveis surtos antes mesmo da confirmação clínica, agilizando ações preventivas como visitas domiciliares ou campanhas de vacinação.</p>
+        <p>As notificações permitem identificar possíveis surtos antes mesmo da confirmação clínica, agilizando ações
+          preventivas como visitas domiciliares ou campanhas de vacinação.</p>
       </div>
     </div>
   </main>
@@ -89,5 +115,7 @@
   <footer>
     <p>&copy; 2025 SINAIS - Sistema Integrado Nacional de Alerta e Informações de Saúde</p>
   </footer>
+
+  <script src="../js/script.js"></script>
 </body>
 </html>

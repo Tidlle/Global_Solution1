@@ -1,50 +1,72 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Integrantes - SINAIS</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="../css/style.css">
 </head>
+
 <body>
   <header class="sinais-header">
     <div class="header-container">
       <div class="logo">
-        <img class="logo-home" src="img/Logo_SINAIS_SemFundo_Home.png" alt="LOGO SINAIS">
+        <img class="logo-home" src="img/Logo_SINAIS_SemFundo_Home.png" alt="LOGO SINAIS" />
       </div>
-      <nav class="menu">
+      <button class="menu-toggle" id="menu-toggle">&#9776;</button>
+
+      <div class="side-menu" id="side-menu">
+        <button class="close-btn" id="close-menu">&times;</button>
+        <nav>
+          <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="integrantes-paciente.html">Integrantes</a></li>
+            <li><a href="faq-paciente.html">FAQ</a></li>
+            <li><a href="contato-paciente.html" class="auth-only">Contato</a></li>
+            <li><a href="mapas-paciente.html">Mapa de Calor</a></li>
+            <li><a href="sintomas-paciente.html" class="auth-only">Enviar Sintomas</a></li>
+            <li id="auth-action-mobile"></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="menu-overlay" id="menu-overlay"></div>
+
+      <nav class="link-pages" id="nav-menu">
         <ul>
-          <li><a href="home-paciente.html">Início</a></li>
+          <li><a href="index.html">Início</a></li>
           <li><a href="integrantes-paciente.html">Integrantes</a></li>
           <li><a href="faq-paciente.html">FAQ</a></li>
-          <li><a href="contato-paciente.html">Contato</a></li>
+          <li><a href="contato-paciente.html" class="auth-only">Contato</a></li>
           <li><a href="mapas-paciente.html">Mapa de Calor</a></li>
-          <li><a href="sintomas-paciente.html">Enviar Sintomas</a></li>
-          <li><a href="index.html" class="logout-button">Sair</a></li>
+          <li><a href="sintomas-paciente.html" class="auth-only">Enviar Sintomas</a></li>
+          <li id="auth-action"></li>
         </ul>
       </nav>
     </div>
   </header>
+
   <main>
     <section class="intro2">
       <h2>Integrantes do Projeto</h2>
       <div class="features">
-        <div class="feature-card" class="integrante">
-          <img src="img/foto1.png" alt="Foto do integrante" width="100">
+        <div class="feature-card-integrantes" class="integrante">
+          <img src="img/Image.jpg" alt="Foto do integrante" width="100">
           <p><strong>Nome:</strong> Eduardo Martins</p>
           <p><strong>RM:</strong> 562259</p>
           <p><strong>Turma:</strong> 1TDSA</p>
           <p><a href="#">GitHub</a> | <a href="#">LinkedIn</a></p>
         </div>
-        <div class="feature-card" class="integrante">
-          <img src="img/foto1.png" alt="Foto do integrante" width="100">
+        <div class="feature-card-integrantes" class="integrante">
+          <img src="img/Image3.jpg" alt="Foto do integrante" width="105">
           <p><strong>Nome:</strong> Vitor Madrigrano</p>
           <p><strong>RM:</strong> 123456</p>
           <p><strong>Turma:</strong> 1TDSA</p>
           <p><a href="#">GitHub</a> | <a href="#">LinkedIn</a></p>
         </div>
-        <div class="feature-card" class="integrante">
-          <img src="img/foto1.png" alt="Foto do integrante" width="100">
+        <div class="feature-card-integrantes" class="integrante">
+          <img src="img/Image2.jpg" alt="Foto do integrante" width="100">
           <p><strong>Nome:</strong> Thiago Sposito</p>
           <p><strong>RM:</strong> 123456</p>
           <p><strong>Turma:</strong> 1TDSA</p>
@@ -57,5 +79,6 @@
   <footer>
     <p>&copy; 2025 SINAIS - Sistema Integrado Nacional de Alerta e Informações de Saúde</p>
   </footer>
+  <script src="../js/script.js"></script>
 </body>
 </html>
