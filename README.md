@@ -59,4 +59,4 @@ O projeto **SINAIS** tem como objetivo rastrear e notificar sintomas de doenças
 
 ## 🌐 Repositório no GitHub
 
-🔗 [https://github.com/usuario/sinais](https://github.com/usuario/sinais)
+🔗 https://github.com/Tidlle/Global_Solution1.git
